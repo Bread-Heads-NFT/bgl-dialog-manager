@@ -7,9 +7,9 @@ const programDir = path.join(__dirname, "..", "programs");
 
 generateIdl({
   generator: "shank",
-  programName: "mpl_project_name",
-  programId: "MyProgram1111111111111111111111111111111111",
+  programName: "bgl_dialog_manager",
+  programId: "D1ALGLQpQ1mYs2QpNfuEVposQp5fwvJAep3y2gUgLo6",
   idlDir,
   binaryInstallDir,
-  programDir: path.join(programDir, "mpl-project-name"),
+  programDir: path.join(programDir, "bgl-dialog-manager"),
 });

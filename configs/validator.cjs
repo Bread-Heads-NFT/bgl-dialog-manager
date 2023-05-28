@@ -10,9 +10,9 @@ module.exports = {
     commitment: "processed",
     programs: [
       {
-        label: "Mpl Project Name",
-        programId: "MyProgram1111111111111111111111111111111111",
-        deployPath: getProgram("mpl-project-name", "mpl_project_name.so"),
+        label: "Bgl Dialog Manager",
+        programId: "D1ALGLQpQ1mYs2QpNfuEVposQp5fwvJAep3y2gUgLo6",
+        deployPath: getProgram("bgl-dialog-manager", "bgl_dialog_manager.so"),
       },
     ],
   },

@@ -9,12 +9,12 @@ program_common: &program_common
   - ".github/workflows/test-programs.yml"
   - ".github/workflows/main.yml"
 
-mpl_project_name: &mpl_project_name
+bgl_dialog_manager: &bgl_dialog_manager
   - *program_common
-  - "programs/mpl-project-name/**"
+  - "programs/bgl-dialog-manager/**"
 
 programs: &programs
-  - *mpl_project_name
+  - *bgl_dialog_manager
 
 # Clients.
 

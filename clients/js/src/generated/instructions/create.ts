@@ -72,8 +72,8 @@ export function create(
   // Program ID.
   const programId = {
     ...context.programs.getPublicKey(
-      'mplProjectName',
-      'MyProgram1111111111111111111111111111111111'
+      'bglDialogManager',
+      'D1ALGLQpQ1mYs2QpNfuEVposQp5fwvJAep3y2gUgLo6'
     ),
     isWritable: false,
   };

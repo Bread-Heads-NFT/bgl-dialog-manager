@@ -16,7 +16,7 @@ pub struct CreateArgs {
 
 #[derive(Debug, Clone, ShankInstruction, BorshSerialize, BorshDeserialize)]
 #[rustfmt::skip]
-pub enum MplProjectNameInstruction {
+pub enum DialogManagerInstruction {
     /// Create My Account.
     /// A detailed description of the instruction.
     #[account(0, writable, signer, name="address", desc = "The address of the new account")]
@@ -40,8 +40,6 @@ pub fn create(
     Instruction {
         program_id: crate::ID,
         accounts,
-        data: MplProjectNameInstruction::Create(args)
-            .try_to_vec()
-            .unwrap(),
+        data: DialogManagerInstruction::Create(args).try_to_vec().unwrap(),
     }
 }

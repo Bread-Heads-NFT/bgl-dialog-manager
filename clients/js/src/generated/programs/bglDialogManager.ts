@@ -14,23 +14,23 @@ import {
   publicKey,
 } from '@metaplex-foundation/umi';
 import {
-  getMplProjectNameErrorFromCode,
-  getMplProjectNameErrorFromName,
+  getBglDialogManagerErrorFromCode,
+  getBglDialogManagerErrorFromName,
 } from '../errors';
 
-export const MPL_PROJECT_NAME_PROGRAM_ID = publicKey(
-  'MyProgram1111111111111111111111111111111111'
+export const BGL_DIALOG_MANAGER_PROGRAM_ID = publicKey(
+  'D1ALGLQpQ1mYs2QpNfuEVposQp5fwvJAep3y2gUgLo6'
 );
 
-export function createMplProjectNameProgram(): Program {
+export function createBglDialogManagerProgram(): Program {
   return {
-    name: 'mplProjectName',
-    publicKey: MPL_PROJECT_NAME_PROGRAM_ID,
+    name: 'bglDialogManager',
+    publicKey: BGL_DIALOG_MANAGER_PROGRAM_ID,
     getErrorFromCode(code: number, cause?: Error) {
-      return getMplProjectNameErrorFromCode(code, this, cause);
+      return getBglDialogManagerErrorFromCode(code, this, cause);
     },
     getErrorFromName(name: string, cause?: Error) {
-      return getMplProjectNameErrorFromName(name, this, cause);
+      return getBglDialogManagerErrorFromName(name, this, cause);
     },
     isOnCluster() {
       return true;
@@ -38,20 +38,20 @@ export function createMplProjectNameProgram(): Program {
   };
 }
 
-export function getMplProjectNameProgram<T extends Program = Program>(
+export function getBglDialogManagerProgram<T extends Program = Program>(
   context: Pick<Context, 'programs'>,
   clusterFilter?: ClusterFilter
 ): T {
-  return context.programs.get<T>('mplProjectName', clusterFilter);
+  return context.programs.get<T>('bglDialogManager', clusterFilter);
 }
 
-export function getMplProjectNameProgramId(
+export function getBglDialogManagerProgramId(
   context: Pick<Context, 'programs'>,
   clusterFilter?: ClusterFilter
 ): PublicKey {
   return context.programs.getPublicKey(
-    'mplProjectName',
-    MPL_PROJECT_NAME_PROGRAM_ID,
+    'bglDialogManager',
+    BGL_DIALOG_MANAGER_PROGRAM_ID,
     clusterFilter
   );
 }
