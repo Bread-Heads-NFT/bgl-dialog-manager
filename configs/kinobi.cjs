@@ -37,8 +37,8 @@ kinobi.update(
 const key = (name) => ({ field: "key", value: k.vEnum("Key", name) });
 kinobi.update(
   new k.SetAccountDiscriminatorFromFieldVisitor({
-    myAccount: key("MyAccount"),
-    myPdaAccount: key("MyPdaAccount"),
+    dialogAccount: key("DialogAccount"),
+    visitorAccount: key("VisitorAccount"),
   })
 );
 
